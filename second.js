@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, Button } from 'react-native';
 
 const SecondPage = ({ navigation }) => {
   return (
@@ -18,21 +18,10 @@ const SecondPage = ({ navigation }) => {
       <Text style={[styles.aboutText, { fontWeight: 'bold' }]}>
         Bringing Words to Gestures :)
       </Text>
-      <TouchableOpacity
-        onPress={() => navigation.navigate('third')}
-        style={styles.button}
-      >
-        <View style={styles.iconsContainer}>
-          <View style={styles.icon}>
-            <Text style={[styles.iconText, { fontWeight: 'bold' }]}>Aa</Text>
-          </View>
-          <View style={styles.arrow} />
-          <Image
-            source={require('C:/Users/omsud/OneDrive/Desktop/expo/react-expoo/assets/exp1.png')}
-            style={styles.image}
-          />
-        </View>
-      </TouchableOpacity>
+      <Button
+        title="Navigate to Third"
+        onPress={() => navigation.navigate('ThirdPage')}
+      />
     </View>
   );
 };
